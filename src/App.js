@@ -3,6 +3,7 @@ import React from 'react';
 import { Home, Cart } from './pages';
 import { Header } from './components';
 import { Route } from 'react-router-dom';
+import { Checkout } from './pages/Checkout';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="content">
         <Route path="/" component={Home} exact />
         <Route path="/cart" component={Cart} exact />
+        <Route path="/checkout" component={Checkout} exact />
       </div>
     </div>
   );

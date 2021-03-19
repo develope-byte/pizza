@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { CartItem, Button } from '../components';
 import { Link } from 'react-router-dom';
@@ -21,7 +22,7 @@ function Cart() {
   };
 
   const onClickOrder = () => {
-console.log('Ваш заказ', items);
+
   }
 
   
@@ -145,9 +146,13 @@ console.log('Ваш заказ', items);
 
                   <span>Вернуться назад</span>
                 </a>
+                <NavLink to='/checkout'>
+                  
+                
                 <Button onClick={onClickOrder} className="pay-btn">
                   <span>Оплатить сейчас</span>
                 </Button>
+                </NavLink>
               </div>
             </div>
           </div>
